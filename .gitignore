@@ -6,3 +6,4 @@ env/
 .vscode/
 .db
 /static/
+general.log
