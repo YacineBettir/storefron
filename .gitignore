@@ -1,7 +1,6 @@
 *.pyc
 /media/
 __pycache__/
-env/
 .env
 .vscode/
 .db
