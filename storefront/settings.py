@@ -12,8 +12,8 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 import os
 from pathlib import Path
 from datetime import timedelta
-from celery.schedules import crontab
-from django import middleware
+# from celery.schedules import crontab
+# from django import middleware
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -200,5 +200,15 @@ CELERY_BEAT_SCHEDULE={
         'schedule':5,
         'args':['hello_world'],
         
+    }
+}
+
+CACHES = {
+    "default": {
+        "BACKEND": "django_redis.cache.RedisCache",
+        "LOCATION": "redis://127.0.0.1:6379/2",
+        "OPTIONS": {
+            "CLIENT_CLASS": "django_redis.client.DefaultClient",
+        }
     }
 }
