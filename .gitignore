@@ -1,0 +1,5 @@
+/venv/
+.env
+general.log
+.db
+/static/
